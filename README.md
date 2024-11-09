@@ -50,7 +50,7 @@ The library provides the following functionalities (this list can be extended as
 To compile the library, clone this repository and use the `Makefile` provided. The `libft.a` static library will be created as an output.
 
 1. Clone the repository:
-
+	```bash
     git clone https://github.com/abdelkabirelmajdoub/1337-libft.git
     cd libft
     ```
