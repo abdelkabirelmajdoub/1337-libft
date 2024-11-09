@@ -19,8 +19,8 @@ NAME = libft.a
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(OBJSB)
-	ar rcs $(NAME) $(OBJS) $(OBJSB)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
