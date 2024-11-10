@@ -6,7 +6,7 @@
 /*   By: ael-majd <ael-majd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:30:02 by ael-majd          #+#    #+#             */
-/*   Updated: 2024/11/06 18:45:53 by ael-majd         ###   ########.fr       */
+/*   Updated: 2024/11/10 18:01:26 by ael-majd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(char *str)
 {
-	int					i;
-	int					s;
-	unsigned long int	r;
+	int	i;
+	int	s;
+	int	r;
 
 	i = 0;
 	s = 1;

@@ -19,19 +19,21 @@ NAME = libft.a
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(OBJSB)
-	ar rcs $(NAME) $(OBJS) $(OBJSB)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-%.o: %.c
+%.o: %.c 
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJS) $(OBJSB) 
 
-bonus: ${OBJSB} $(OBJS)
-	ar rcs ${NAME} ${OBJSB} $(OBJS)
+bonus: $(OBJSB)
+	ar rcs $(NAME) $(OBJSB)
 
 fclean: clean
 	@rm -f $(NAME) 
 
 re: fclean all
+
+.PHONY: clean
