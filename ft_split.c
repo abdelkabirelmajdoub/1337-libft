@@ -39,9 +39,19 @@ static int	count_word(char const *s, char c)
 	return (count);
 }
 
+static char **free_array(char **split, int j)
+{
+	while(j > 0)
+	{
+		free(split[j]);
+		j--;
+	}
+	free(split);
+	return (NULL);
+}
+
 static char	**split_word(char **split, const char *s, char c)
 {
-	int	len;
 	int	start;
 	int	j;
 	int	i;
@@ -50,7 +60,6 @@ static char	**split_word(char **split, const char *s, char c)
 	j = 0;
 	while (s[i])
 	{
-		len = 0;
 		while (s[i] == c && s[i])
 			i++;
 		start = i;
@@ -58,8 +67,9 @@ static char	**split_word(char **split, const char *s, char c)
 		{
 			while (s[i] != c && s[i])
 				i++;
-			len = i - start;
-			split[j] = ft_substr(s, start, len);
+			split[j] = ft_substr(s, start, i - start);
+			if (!split[j])
+				return (free_split(split, j));
 			j++;
 		}
 	}
