@@ -6,12 +6,11 @@
 /*   By: ael-majd <ael-majd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:43:53 by ael-majd          #+#    #+#             */
-/*   Updated: 2024/11/02 15:50:34 by ael-majd         ###   ########.fr       */
+/*   Updated: 2024/11/11 14:10:59 by ael-majd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

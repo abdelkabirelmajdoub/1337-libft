@@ -6,7 +6,7 @@
 /*   By: ael-majd <ael-majd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:40:13 by ael-majd          #+#    #+#             */
-/*   Updated: 2024/11/07 21:09:56 by ael-majd         ###   ########.fr       */
+/*   Updated: 2024/11/12 12:40:30 by ael-majd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_node = ft_lstnew(content);
 		if (!new_node)
 		{
-			ft_lstclear(&new_node, (*del));
+			del(content);
+			ft_lstclear(&new_head, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&new_head, new_node);

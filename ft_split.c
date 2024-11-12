@@ -6,7 +6,7 @@
 /*   By: ael-majd <ael-majd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:31:24 by ael-majd          #+#    #+#             */
-/*   Updated: 2024/11/02 12:54:04 by ael-majd         ###   ########.fr       */
+/*   Updated: 2024/11/12 10:08:10 by ael-majd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,19 @@ static int	count_word(char const *s, char c)
 	return (count);
 }
 
+static char	**free_split(char **s, int j)
+{
+	while (j >= 0)
+	{
+		free(s[j]);
+		j--;
+	}
+	free(s);
+	return (NULL);
+}
+
 static char	**split_word(char **split, const char *s, char c)
 {
-	int	len;
 	int	start;
 	int	j;
 	int	i;
@@ -50,7 +60,6 @@ static char	**split_word(char **split, const char *s, char c)
 	j = 0;
 	while (s[i])
 	{
-		len = 0;
 		while (s[i] == c && s[i])
 			i++;
 		start = i;
@@ -58,8 +67,9 @@ static char	**split_word(char **split, const char *s, char c)
 		{
 			while (s[i] != c && s[i])
 				i++;
-			len = i - start;
-			split[j] = ft_substr(s, start, len);
+			split[j] = ft_substr(s, start, i - start);
+			if (!split[j])
+				return (free_split(split, j));
 			j++;
 		}
 	}
