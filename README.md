@@ -2,16 +2,6 @@ Libft
 
 A custom library created as part of the School 42 curriculum, replicating a subset of the C standard library functions with a few additional utility functions.
 
-Table of Contents
-
-Introduction
-Functions Implemented
-Project Structure
-Compilation
-Usage
-Notes
-License
-
 Introduction
 
 Libft is a personal C library created from scratch to understand and replicate several fundamental functions of the C standard library. This project serves as a foundation for all future projects at School 42, providing essential tools for managing strings, memory, linked lists, and more.
