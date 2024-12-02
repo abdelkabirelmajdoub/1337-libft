@@ -1,5 +1,4 @@
 ---
-
 Libft
 
 A custom library created as part of the School 42 curriculum, replicating a subset of the C standard library functions with a few additional utility functions.
@@ -43,25 +42,25 @@ Bonus
 Additionally, it includes linked list functions to help manage t_list structures.
 
 Project Structure
-
+```
 📁 libft/
 ├── src/              # Contains all function implementations
 ├── includes/         # Contains the libft.h header file
 ├── Makefile          # Script to compile the library
 └── README.md         # This file
-
+```
 Compilation
 
 To compile the library, use the Makefile provided:
-
+```
 make
-
+```
 This command will generate a libft.a static library, which can then be linked to other projects.
 
 To clean up object files, use:
-
+```
 make clean
-
+```
 To remove all compiled files, including the static library, use:
 
 make fclean
@@ -75,16 +74,14 @@ Usage
 
 
 3. Link libft.a with your own project:
-
+```
 gcc your_project.c -L. -lft -o your_project
 
-
+```
 4. Include libft.h in your code to access the functions:
-
+```
 #include "libft.h"
-
-
-
+```
 Notes
 
 The t_list struct used in the bonus section has a content field of type void*, allowing it to store data of any type.
