@@ -1,4 +1,3 @@
----
 Libft
 
 A custom library created as part of the School 42 curriculum, replicating a subset of the C standard library functions with a few additional utility functions.
@@ -6,19 +5,12 @@ A custom library created as part of the School 42 curriculum, replicating a subs
 Table of Contents
 
 Introduction
-
 Functions Implemented
-
 Project Structure
-
 Compilation
-
 Usage
-
 Notes
-
 License
-
 
 Introduction
 
@@ -88,10 +80,6 @@ The t_list struct used in the bonus section has a content field of type void*, a
 
 This library is limited to the functions and types specified in the project requirements.
 
-
 License
 
 This project is released under the MIT License. See LICENSE for more details.
-
-
----
